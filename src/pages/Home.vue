@@ -4,7 +4,7 @@
     <ul>
       <li v-for="video in store.videos">
         <a @click="play(video.id)">{{video.title}}</a>
-        <a v-if="video.id == store.current && !store.pause" @click="pause()">⏸</a>
+        <a v-if="video.id === store.current && !store.pause" @click="pause()">⏸</a>
         <a v-else @click="play(video.id)">▶️</a>
       </li>
     </ul>
